@@ -33,18 +33,18 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnOrdenar = new System.Windows.Forms.Button();
+            this.txtLimiteVector = new System.Windows.Forms.TextBox();
             this.optBubbleSort = new System.Windows.Forms.RadioButton();
             this.optMergeSort = new System.Windows.Forms.RadioButton();
             this.optQuickSort = new System.Windows.Forms.RadioButton();
-            this.txtLimiteVector = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtTiempo = new System.Windows.Forms.TextBox();
             this.txtIntercambios = new System.Windows.Forms.TextBox();
-            this.btnOrdenar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.columMétodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columCanElementos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,73 +73,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selección";
             // 
-            // groupBox2
+            // label4
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtTiempo);
-            this.groupBox2.Controls.Add(this.txtIntercambios);
-            this.groupBox2.Location = new System.Drawing.Point(12, 362);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(187, 240);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Resultados";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "• Elija el método:";
             // 
-            // optBubbleSort
+            // label3
             // 
-            this.optBubbleSort.AutoSize = true;
-            this.optBubbleSort.Location = new System.Drawing.Point(22, 71);
-            this.optBubbleSort.Name = "optBubbleSort";
-            this.optBubbleSort.Size = new System.Drawing.Size(101, 19);
-            this.optBubbleSort.TabIndex = 0;
-            this.optBubbleSort.TabStop = true;
-            this.optBubbleSort.Text = "Bubble Sort";
-            this.optBubbleSort.UseVisualStyleBackColor = true;
-            // 
-            // optMergeSort
-            // 
-            this.optMergeSort.AutoSize = true;
-            this.optMergeSort.Location = new System.Drawing.Point(22, 96);
-            this.optMergeSort.Name = "optMergeSort";
-            this.optMergeSort.Size = new System.Drawing.Size(97, 19);
-            this.optMergeSort.TabIndex = 1;
-            this.optMergeSort.TabStop = true;
-            this.optMergeSort.Text = "Merge Sort";
-            this.optMergeSort.UseVisualStyleBackColor = true;
-            // 
-            // optQuickSort
-            // 
-            this.optQuickSort.AutoSize = true;
-            this.optQuickSort.Location = new System.Drawing.Point(22, 121);
-            this.optQuickSort.Name = "optQuickSort";
-            this.optQuickSort.Size = new System.Drawing.Size(93, 19);
-            this.optQuickSort.TabIndex = 2;
-            this.optQuickSort.TabStop = true;
-            this.optQuickSort.Text = "Quick Sort";
-            this.optQuickSort.UseVisualStyleBackColor = true;
-            // 
-            // txtLimiteVector
-            // 
-            this.txtLimiteVector.Location = new System.Drawing.Point(22, 193);
-            this.txtLimiteVector.Name = "txtLimiteVector";
-            this.txtLimiteVector.Size = new System.Drawing.Size(131, 23);
-            this.txtLimiteVector.TabIndex = 3;
-            // 
-            // txtTiempo
-            // 
-            this.txtTiempo.Location = new System.Drawing.Point(21, 63);
-            this.txtTiempo.Name = "txtTiempo";
-            this.txtTiempo.Size = new System.Drawing.Size(132, 23);
-            this.txtTiempo.TabIndex = 4;
-            // 
-            // txtIntercambios
-            // 
-            this.txtIntercambios.Location = new System.Drawing.Point(22, 147);
-            this.txtIntercambios.Name = "txtIntercambios";
-            this.txtIntercambios.Size = new System.Drawing.Size(131, 23);
-            this.txtIntercambios.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 175);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "• Límite del vector";
             // 
             // btnOrdenar
             // 
@@ -154,41 +104,91 @@
             this.btnOrdenar.Text = "ORDENAR";
             this.btnOrdenar.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // txtLimiteVector
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "• Tiempo";
+            this.txtLimiteVector.Location = new System.Drawing.Point(22, 193);
+            this.txtLimiteVector.Name = "txtLimiteVector";
+            this.txtLimiteVector.Size = new System.Drawing.Size(131, 22);
+            this.txtLimiteVector.TabIndex = 3;
+            // 
+            // optBubbleSort
+            // 
+            this.optBubbleSort.AutoSize = true;
+            this.optBubbleSort.Location = new System.Drawing.Point(22, 71);
+            this.optBubbleSort.Name = "optBubbleSort";
+            this.optBubbleSort.Size = new System.Drawing.Size(95, 20);
+            this.optBubbleSort.TabIndex = 0;
+            this.optBubbleSort.TabStop = true;
+            this.optBubbleSort.Text = "Bubble Sort";
+            this.optBubbleSort.UseVisualStyleBackColor = true;
+            // 
+            // optMergeSort
+            // 
+            this.optMergeSort.AutoSize = true;
+            this.optMergeSort.Location = new System.Drawing.Point(22, 96);
+            this.optMergeSort.Name = "optMergeSort";
+            this.optMergeSort.Size = new System.Drawing.Size(91, 20);
+            this.optMergeSort.TabIndex = 1;
+            this.optMergeSort.TabStop = true;
+            this.optMergeSort.Text = "Merge Sort";
+            this.optMergeSort.UseVisualStyleBackColor = true;
+            // 
+            // optQuickSort
+            // 
+            this.optQuickSort.AutoSize = true;
+            this.optQuickSort.Location = new System.Drawing.Point(22, 121);
+            this.optQuickSort.Name = "optQuickSort";
+            this.optQuickSort.Size = new System.Drawing.Size(86, 20);
+            this.optQuickSort.TabIndex = 2;
+            this.optQuickSort.TabStop = true;
+            this.optQuickSort.Text = "Quick Sort";
+            this.optQuickSort.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtTiempo);
+            this.groupBox2.Controls.Add(this.txtIntercambios);
+            this.groupBox2.Location = new System.Drawing.Point(12, 362);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(187, 240);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Resultados";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "• Intercambios";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "• Límite del vector";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "• Tiempo";
             // 
-            // label4
+            // txtTiempo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "• Elija el método:";
+            this.txtTiempo.Location = new System.Drawing.Point(21, 63);
+            this.txtTiempo.Name = "txtTiempo";
+            this.txtTiempo.Size = new System.Drawing.Size(132, 22);
+            this.txtTiempo.TabIndex = 4;
+            // 
+            // txtIntercambios
+            // 
+            this.txtIntercambios.Location = new System.Drawing.Point(22, 147);
+            this.txtIntercambios.Name = "txtIntercambios";
+            this.txtIntercambios.Size = new System.Drawing.Size(131, 22);
+            this.txtIntercambios.TabIndex = 5;
             // 
             // dgvDatos
             // 
@@ -253,7 +253,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(879, 631);
@@ -262,7 +262,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Proyecto_Modelos_de_Ordenamiento
 {
@@ -305,6 +306,32 @@ namespace Proyecto_Modelos_de_Ordenamiento
                 j++;
                 k++;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            //vectores con los datos
+            string[] series = { "BubbleSort", "MergeSort", "QuickSort" };
+            int[] puntos = { BubbleIteraciones,MergeIteraciones,QuickIteraciones};
+
+            chartDatos.Titles.Add("Métodos");
+
+            for (int i = 0; i < series.Length; i++)
+            {
+                //titulos
+                Series series1 = chartDatos.Series.Add(series[i]);  
+
+                //cantidadeds 
+                series1.Label = puntos[i].ToString();
+
+                series1.Points.Add(puntos[i]);
+            }
+        }
+
+        private void chartDatos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

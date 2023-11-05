@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -178,6 +177,7 @@
             // 
             // txtTiempo
             // 
+            this.txtTiempo.Enabled = false;
             this.txtTiempo.Location = new System.Drawing.Point(21, 63);
             this.txtTiempo.Name = "txtTiempo";
             this.txtTiempo.Size = new System.Drawing.Size(132, 22);
@@ -185,6 +185,7 @@
             // 
             // txtIntercambios
             // 
+            this.txtIntercambios.Enabled = false;
             this.txtIntercambios.Location = new System.Drawing.Point(22, 147);
             this.txtIntercambios.Name = "txtIntercambios";
             this.txtIntercambios.Size = new System.Drawing.Size(131, 22);
@@ -243,13 +244,10 @@
             this.chartDatos.Location = new System.Drawing.Point(214, 349);
             this.chartDatos.Name = "chartDatos";
             this.chartDatos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDatos.Series.Add(series1);
             this.chartDatos.Size = new System.Drawing.Size(643, 270);
             this.chartDatos.TabIndex = 2;
             this.chartDatos.Text = "chart1";
+            this.chartDatos.Click += new System.EventHandler(this.chartDatos_Click);
             // 
             // Form1
             // 
@@ -268,6 +266,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Métodos de Ordenamiento";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

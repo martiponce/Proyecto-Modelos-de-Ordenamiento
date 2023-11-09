@@ -102,6 +102,7 @@
             this.btnOrdenar.TabIndex = 6;
             this.btnOrdenar.Text = "ORDENAR";
             this.btnOrdenar.UseVisualStyleBackColor = false;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click_1);
             // 
             // txtLimiteVector
             // 

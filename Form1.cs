@@ -24,8 +24,7 @@ namespace Proyecto_Modelos_de_Ordenamiento
         private int MergeIteraciones = 0;
         private int QuickIteraciones = 0;
 
-
-        private void btnOrdenar_Click(object sender, EventArgs e)
+        private void btnOrdenar_Click_1(object sender, EventArgs e)
         {
             int opcion = 0;
 
@@ -144,7 +143,6 @@ namespace Proyecto_Modelos_de_Ordenamiento
             }
         }
 
-
         // === Mezclar vector === \\
         private void MezclarArray(int[] arr)
         {
@@ -258,11 +256,11 @@ namespace Proyecto_Modelos_de_Ordenamiento
             int n1 = middle - left + 1;
             int n2 = right - middle;
 
-            // Crear sub-arrays temporales
+            
             int[] L = new int[n1];
             int[] R = new int[n2];
 
-            // Copiar datos a los sub-arrays L[] y R[]
+            
             for (int x = 0; x < n1; x++)
             {
                 L[x] = arr[left + x];
@@ -272,7 +270,7 @@ namespace Proyecto_Modelos_de_Ordenamiento
                 R[z] = arr[middle + 1 + z];
             }
 
-            // Fusionar los sub-arrays
+            
             int k = left;
             int i = 0, j = 0;
 
@@ -291,7 +289,7 @@ namespace Proyecto_Modelos_de_Ordenamiento
                 k++;
             }
 
-            // Copiar los elementos restantes de L[], si los hay
+            
             while (i < n1)
             {
                 arr[k] = L[i];
@@ -299,7 +297,7 @@ namespace Proyecto_Modelos_de_Ordenamiento
                 k++;
             }
 
-            // Copiar los elementos restantes de R[], si los hay
+            
             while (j < n2)
             {
                 arr[k] = R[j];
